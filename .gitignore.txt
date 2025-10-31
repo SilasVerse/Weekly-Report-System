@@ -1,0 +1,19 @@
+# Maven build output
+/target/
+
+# IDEs
+/.idea/
+/.vscode/
+/*.iml
+/.classpath
+/.project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Sensitive config
+src/main/java/com/weeklyreport/util/DBUtil.java

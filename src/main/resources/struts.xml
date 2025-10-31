@@ -1,0 +1,52 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  <constant name="struts.devMode" value="true" />
+  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+  <package name="default" namespace="/" extends="struts-default">
+    
+    <!-- Login Actions -->
+    <action name="login" class="com.weeklyreport.action.LoginAction" method="execute">
+      <result name="success">/jsp/dashboard.jsp</result>
+      <result name="error">/jsp/login.jsp</result>
+    </action>
+
+    <action name="logout" class="com.weeklyreport.action.LoginAction" method="logout">
+      <result>/jsp/login.jsp</result>
+    </action>
+
+    <!-- Report Actions -->
+    <action name="addReport" class="com.weeklyreport.action.ReportAction" method="add">
+      <result name="success" type="redirectAction">
+        <param name="actionName">viewReports</param>
+        <param name="namespace">/</param>
+      </result>
+      <result name="input">/jsp/addReport.jsp</result>
+      <result name="error">/jsp/addReport.jsp</result>
+      <result name="login">/jsp/login.jsp</result>
+    </action>
+
+    <action name="viewReports" class="com.weeklyreport.action.ReportAction" method="list">
+      <result name="success">/jsp/viewReports.jsp</result>
+    </action>
+
+    <!-- User Management Actions -->
+    <action name="manageUsers" class="com.weeklyreport.action.UserAction" method="list">
+      <result name="success">/jsp/admin/manageUsers.jsp</result>
+    </action>
+
+    <action name="createUser" class="com.weeklyreport.action.UserAction" method="create">
+      <result name="success" type="redirectAction">manageUsers</result>
+      <result name="input">/jsp/admin/addUser.jsp</result>
+    </action>
+    
+    <!-- Dashboard Action -->
+    <action name="dashboard" class="com.weeklyreport.action.LoginAction">
+      <result name="success">/jsp/dashboard.jsp</result>
+      <result name="error">/jsp/login.jsp</result>
+    </action>
+    
+  </package>
+</struts>

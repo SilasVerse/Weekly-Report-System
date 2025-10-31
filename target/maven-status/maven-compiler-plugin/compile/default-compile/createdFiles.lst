@@ -1,0 +1,8 @@
+com\weeklyreport\model\Report.class
+com\weeklyreport\action\UserAction.class
+com\weeklyreport\dao\ReportDAO.class
+com\weeklyreport\util\DBUtil.class
+com\weeklyreport\action\ReportAction.class
+com\weeklyreport\dao\UserDAO.class
+com\weeklyreport\model\User.class
+com\weeklyreport\action\LoginAction.class
