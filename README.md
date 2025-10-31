@@ -4,6 +4,47 @@
 Simple starter project for a Weekly Report Management System using Struts2, MySQL and Bootstrap 3.
 This is a minimal, educational example.
 
+
+## 🧭 Project File Structure
+WeeklyReportSystem/
+│
+├── src/
+│ ├── main/
+│ │ ├── java/
+│ │ │ └── com/weeklyreport/
+│ │ │ ├── action/ # Struts2 Actions
+│ │ │ │ ├── LoginAction.java
+│ │ │ │ ├── ReportAction.java
+│ │ │ │ └── UserAction.java
+│ │ │ ├── dao/ # Data Access Objects
+│ │ │ │ ├── ReportDAO.java
+│ │ │ │ └── UserDAO.java
+│ │ │ ├── model/ # Entity Classes
+│ │ │ │ ├── Report.java
+│ │ │ │ └── User.java
+│ │ │ └── util/ # Utility Classes
+│ │ │ └── DBUtil.java
+│ │ ├── resources/ # Configuration Files
+│ │ │ ├── struts.xml
+│ │ │ └── .gitignore
+│ │ └── webapp/
+│ │ ├── WEB-INF/
+│ │ │ └── web.xml
+│ │ └── jsp/ # View Templates
+│ │ ├── login.jsp
+│ │ ├── dashboard.jsp
+│ │ ├── addReport.jsp
+│ │ ├── viewReports.jsp
+│ │ └── admin/
+│ │ └── manageUsers.jsp
+│ └── test/ # Test Classes (Optional)
+│
+├── db/
+│ └── schema.sql # Database Schema
+├── target/ # Build Output
+├── pom.xml # Maven Configuration
+
+
 ## How to run
 1. Install MySQL and create the database:
    - Run `db/schema.sql` in your MySQL server. Adjust credentials in `DBUtil.java` if needed.
